@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<link rel="stylesheet" href="/css/main.css">
+	<title>Eddie's Reviews</title>
+</head>
+
+<div class = "container">
+<body>
+
+	<header>
+		<h1>Reviews</h1>
+	</header>
+	
+	<main>
+	<div class="logo">
+	<img th:src="@{images/Reviews.jpg}"/>
+	</div>
+		<ul>
+            <li th:each="review: ${reviews}"><a th:href="|/review/${review.id}|" 
+                th:text="${review.name}"></a></li>
+		</ul>
+	</main>
+
+
+	<footer>
+		<p><a href="/catagories">Go Back To Reviews</a></p>
+		<small>The Opinions of One Man with Too Much Time 2020</small>
+	</footer>
+</body>
+</div>
+</html>

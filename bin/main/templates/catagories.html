@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+
+<html xmlns:th="http://ww.thymeleaf.org">
+<link rel="stylesheet" href="/css/main.css" type="text/css">
+
+<head>
+    <title>List of Review Catagories</title>
+</head>
+
+<body>
+    <header>
+    <h1>Review Catagories</h1>
+    </header>
+
+    <img th:src="@{images/Reviews.png}"/>
+
+    <ul>
+        <li th:each="catagory: ${catagories}"><a th:href="|/catagory?id=${catagory.id}|" 
+            th:text="${catagory.name}"></a></li>
+    </ul>
+</body>
+
+<footer>
+    <small>The Opinions of One Man with Too Much Time, 2020</small>
+</footer>
+
+</html>
